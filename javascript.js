@@ -28,3 +28,27 @@ for(let i = 0; i < divs.length; i++){
     console.log('you clicked div #' + i)
   })
 }
+
+//TEMPLATE STRING/LITERALS
+
+//es5
+function returnEmployeeEs5(){
+  var name = 'Francis';
+  var age = 21;
+  var position = 'Manager';
+
+  console.log("ES5 - His name is " + name + ", he is " + age + "years old and he works as a " + position);
+};
+
+returnEmployeeEs5();
+
+//es6
+function returnEmployee(){
+  const name = 'Francis';
+  const age = 21;
+  const position = 'Manager';
+
+  console.log(`ES6 - His name is ${name}, he is ${age} years old and he works as a ${position}`);
+};
+
+returnEmployee();
