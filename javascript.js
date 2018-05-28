@@ -52,3 +52,7 @@ function returnEmployee(){
 };
 
 returnEmployee();
+
+const names = ['James', 'Ron', 'Ace'];
+
+console.log(`The name is ${names[Math.floor(Math.random() * names.length - 1) + 1]}`)
