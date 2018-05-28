@@ -64,7 +64,7 @@ const user = {
   position: 'manager'
 }
 
-console.log(`My name is ${user.name}, I am ${user.age} years old and I works as a ${user.position}`);
+console.log(`My name is ${user.name}, I am ${user.age} years old and I work as a ${user.position}`);
 
 
 //Network request - es5
@@ -113,10 +113,12 @@ function addUser(name, lastname){
   </div>
   `
 
-
-
   list.insertAdjacentHTML("beforeend",template)
 }
 
 addUser('Francis', 'Jones');
 addUser('Jane', 'Doe');
+
+console.log("This\nis\nawesome\xa0")
+//es6 has a method to escape raw content
+console.log(String.raw`This\nis\nawesome\xa0`)
