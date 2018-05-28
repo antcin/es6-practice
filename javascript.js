@@ -122,3 +122,16 @@ addUser('Jane', 'Doe');
 console.log("This\nis\nawesome\xa0")
 //es6 has a method to escape raw content
 console.log(String.raw`This\nis\nawesome\xa0`)
+
+
+const artists = ['Clapton', 'U2', 'Bruno Mars', 'Lamar'];
+
+//es5
+for(var i = 0; i < artists.length; i++){
+  console.log(artists[i])
+}
+
+//es6 using forEach
+artists.forEach(function(artist){
+  console.log(artist)
+});

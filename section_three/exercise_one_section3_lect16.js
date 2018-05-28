@@ -10,10 +10,14 @@ const players = [
 
 let list = '';
 
-for(let i = 0; i < players.length; i ++){
-  let player = players[i]
+// for(let i = 0; i < players.length; i ++){
+//   let player = players[i]
+//
+//   list += `<li>${player.jersey} - ${player.name} -- Position: ${player.position} -- PPG: ${player.PPG}</li> `
+// };
 
-  list += `<li>${player.jersey} - ${player.name} -- Position: ${player.position} -- PPG: ${player.ppg}</li> `
-};
+players.forEach(function(player){
+  list += `<li>${player.jersey} - ${player.name} -- Position: ${player.position} -- PPG: ${player.PPG}</li> `
+});
 
 ul.insertAdjacentHTML("beforeend", list)
