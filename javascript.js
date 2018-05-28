@@ -20,11 +20,8 @@ var divs = document.getElementsByTagName('div');
 
 for(let i = 0; i < divs.length; i++){
 
-  //node[i] => div 0
-  //node[i] => div 1
-  //node[i] => div 2
-  //node[i] => div 3
-  // js doesn't know what's happening and overrides the previous till it reaches the last
+  //this works because let has its own scope
+  // four different instances of let are created
 
 
   divs[i].addEventListener('click', function() {
