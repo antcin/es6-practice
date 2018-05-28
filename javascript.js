@@ -55,4 +55,32 @@ returnEmployee();
 
 const names = ['James', 'Ron', 'Ace'];
 
+// can run logic in template strings
 console.log(`The name is ${names[Math.floor(Math.random() * names.length - 1) + 1]}`)
+
+const user = {
+  name: 'Francis',
+  age: 21,
+  position: 'manager'
+}
+
+console.log(`My name is ${user.name}, I am ${user.age} years old and I works as a ${user.position}`);
+
+
+//Network request - es5
+function request(page, id){
+  var URL = "http://server.com/" + page + "/" + id;
+
+  console.log(URL)
+}
+
+request('pages', 5)
+
+//Network request - es5
+function request(page, id){
+  const URL = `http://server.com/${page}/${id}`
+
+  console.log(URL)
+}
+
+request('pages', 4)
