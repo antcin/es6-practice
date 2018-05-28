@@ -84,3 +84,39 @@ function request(page, id){
 }
 
 request('pages', 4)
+
+//es5
+var list = document.querySelector('.user_list')
+
+function addUser(name, lastname){
+  var template = '';
+
+  template += '<div class="user">';
+  template += '<div>' + name + '</div>'
+  template += '<div>' + lastname + '</div>'
+  template += '</div>'
+
+  list.insertAdjacentHTML("beforeend",template)
+}
+
+addUser('Francis', 'Jones');
+addUser('Jane', 'Doe');
+
+//es6
+var list = document.querySelector('.user_list')
+
+function addUser(name, lastname){
+  var template = `
+  <div class="user">
+    <div>${name}</div>
+    <div>${lastname}</div>
+  </div>
+  `
+
+
+
+  list.insertAdjacentHTML("beforeend",template)
+}
+
+addUser('Francis', 'Jones');
+addUser('Jane', 'Doe');
