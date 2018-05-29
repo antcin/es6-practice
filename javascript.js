@@ -195,10 +195,10 @@ const listOfUsers = users.map(function(user){
   return user.user
 });
 
-listOfUsers.forEach(function(name){
-  const select = document.querySelector('select')
-  select.insertAdjacentHTML('afterbegin', `<option value="${name}">${name}</option>`)
-})
+// listOfUsers.forEach(function(name){
+//   const select = document.querySelector('select')
+//   select.insertAdjacentHTML('afterbegin', `<option value="${name}">${name}</option>`)
+// })
 
 // const products = [
 //   {name: 'iPad', category: 'devices'},
@@ -232,7 +232,7 @@ const brands = [
   {name: 'HP', id: 2},
   {name: 'Samsung', id: 3},
   {name: 'Samsung', id: 4}
-]
+];
 
 const resultBrand = brands.find(function(brand){
   return brand.name === 'Samsung'
@@ -241,3 +241,34 @@ const resultBrand = brands.find(function(brand){
 //find only return first result and stops checking for data. Kind of a switch in es5
 
 console.log(resultBrand)
+
+const cars = [
+  {brand: "Ford", price: 500, available: 2, type: 'Sport car'},
+  {brand: "Nissan", price: 200, available: 5, type: 'Wagon'},
+  {brand: "Chevy", price: 300, available: 4, type: 'Sport car'},
+  {brand: "Porsche", price: 100, available: 1, type: 'Urban'},
+];
+
+function getResults(price, type){
+  return cars.find(function(car){
+    return car.price < price
+      && car.available > 0
+      && car.type === type
+  });
+};
+
+document.querySelector('.search').addEventListener("click", function(){
+
+  let price = parseInt(document.querySelector('#price').value)
+
+  let type = document.querySelector('#type').value
+
+  let results = getResults(price, type)
+
+  if(results){
+    console.log(`Found ${results.brand} for $ ${results.price}`)
+  } else {
+    console.log(`No car found`)
+  }
+
+})
