@@ -287,17 +287,16 @@ const students = [
 //   let student = students[i]
 //
 //   if(student.grade < 6){
-//       allStudentsPassedTheCourse = false;
+//       allStudentsPassedTheCourse = true;
 //       break;
 //   } else {
-//       allStudentsPassedTheCourse = true;
+//       allStudentsPassedTheCourse = false;
 //   }
 // }
 
 //es6
-let allStudentsPassedTheCourse = students.every(function(student){
+let allStudentsPassedTheCourse = students.some(function(student){
   return student.grade >= 6
-});
-
+})
 
 console.log(allStudentsPassedTheCourse)
