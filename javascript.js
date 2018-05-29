@@ -272,3 +272,32 @@ document.querySelector('.search').addEventListener("click", function(){
   }
 
 })
+
+//every & some helper
+const students = [
+  {name: 'Francis', grade: 4},
+  {name: 'Martin', grade: 5},
+  {name: 'Martha', grade: 7},
+]
+
+// let allStudentsPassedTheCourse = false;
+
+//es5 version
+// for(let i = 0; i < students.length; i++){
+//   let student = students[i]
+//
+//   if(student.grade < 6){
+//       allStudentsPassedTheCourse = false;
+//       break;
+//   } else {
+//       allStudentsPassedTheCourse = true;
+//   }
+// }
+
+//es6
+let allStudentsPassedTheCourse = students.every(function(student){
+  return student.grade >= 6
+});
+
+
+console.log(allStudentsPassedTheCourse)
