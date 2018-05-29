@@ -153,12 +153,10 @@ var purchases = [
 ]
 
 var total = 0;
-
 // for(var i = 0; i < purchases.length; i++){
 //   total += purchases[i].quantity * purchases[i].amount
 // }
 //
-
 
 //es5 forEach - working with array of objects
 purchases.forEach(function(item){
@@ -166,3 +164,23 @@ purchases.forEach(function(item){
 });
 
 console.log(total)
+
+//MAP HELPER
+
+//es5
+// var numbers = [1, 2, 3, 4, 5];
+// var otherArray = [];
+//
+// for(var i = 0; i < numbers.length; i++){
+//   otherArray.push(numbers[i] * 10)
+// }
+
+
+//es6
+const otherNumbers = [1, 2, 3, 4, 5];
+
+const otherArray = otherNumbers.map(function(number){ //map always return something
+  return number * 10
+})
+
+console.log(otherArray)
