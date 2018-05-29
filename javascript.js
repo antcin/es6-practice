@@ -200,16 +200,28 @@ listOfUsers.forEach(function(name){
   select.insertAdjacentHTML('afterbegin', `<option value="${name}">${name}</option>`)
 })
 
+// const products = [
+//   {name: 'iPad', category: 'devices'},
+//   {name: 'Sony 3D', category: 'TV'},
+//   {name: 'E256', category: 'blender'},
+//   {name: 'Super vision', category: 'TV'},
+//   {name: 'iPhone 7', category: 'phones'}
+// ]
+//
+// const result = products.filter(function(product){ //filter always returns something
+//   return product.category === 'TV'
+// });
+
 const products = [
-  {name: 'iPad', category: 'devices'},
-  {name: 'Sony 3D', category: 'TV'},
-  {name: 'E256', category: 'blender'},
-  {name: 'Super vision', category: 'TV'},
-  {name: 'iPhone 7', category: 'phones'}
+  {name: 'iPad', category: 'devices', number: 20, price: 200},
+  {name: 'Sony 3D', category: 'TV', number: 0, price: 400},
+  {name: 'E256', category: 'blender', number: 3, price: 50},
+  {name: 'Super vision', category: 'TV', number: 7, price: 500},
+  {name: 'iPhone 7', category: 'phones', number: 40, price: 2}
 ]
 
 const result = products.filter(function(product){
-  return product.category === 'TV'
+  return product.category === 'TV' &&  product.number > 0 && product.price > 200
 });
 
 console.log(result)
