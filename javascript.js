@@ -225,3 +225,19 @@ const result = products.filter(function(product){
 });
 
 console.log(result)
+
+//find helper
+const brands = [
+  {name: 'Apple', id: 1},
+  {name: 'HP', id: 2},
+  {name: 'Samsung', id: 3},
+  {name: 'Samsung', id: 4}
+]
+
+const resultBrand = brands.find(function(brand){
+  return brand.name === 'Samsung'
+})
+
+//find only return first result and stops checking for data. Kind of a switch in es5
+
+console.log(resultBrand)
