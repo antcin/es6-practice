@@ -135,3 +135,12 @@ for(var i = 0; i < artists.length; i++){
 artists.forEach(function(artist){
   console.log(artist)
 });
+
+//more es6 forEach
+const moreNames = ['francis', 'lisa', 'marion', 'ron'];
+let template = '';
+
+moreNames.forEach(function(name){
+  template += `<div>Hi, my name is ${name}</div>`
+});
+document.body.insertAdjacentHTML("afterbegin", template)
