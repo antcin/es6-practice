@@ -179,8 +179,23 @@ console.log(total)
 //es6
 const otherNumbers = [1, 2, 3, 4, 5];
 
-const otherArray = otherNumbers.map(function(number){ //map always return something
+const otherArray = otherNumbers.map(function(number){ //map always returns something
   return number * 10
 })
 
 console.log(otherArray)
+
+const users = [
+  {user: 'Martin Jones', age: 32, eyes:'brown'},
+  {user: 'Jane Doe', age: 20, eyes: 'blue'},
+  {user: 'Brian Wrecker', age: 40, eyes: 'brown'}
+];
+
+const listOfUsers = users.map(function(user){
+  return user.user
+});
+
+listOfUsers.forEach(function(name){
+  const select = document.querySelector('select')
+  select.insertAdjacentHTML('afterbegin', `<option value="${name}">${name}</option>`)
+})
