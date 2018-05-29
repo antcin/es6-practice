@@ -199,3 +199,17 @@ listOfUsers.forEach(function(name){
   const select = document.querySelector('select')
   select.insertAdjacentHTML('afterbegin', `<option value="${name}">${name}</option>`)
 })
+
+const products = [
+  {name: 'iPad', category: 'devices'},
+  {name: 'Sony 3D', category: 'TV'},
+  {name: 'E256', category: 'blender'},
+  {name: 'Super vision', category: 'TV'},
+  {name: 'iPhone 7', category: 'phones'}
+]
+
+const result = products.filter(function(product){
+  return product.category === 'TV'
+});
+
+console.log(result)
