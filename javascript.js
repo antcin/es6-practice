@@ -300,3 +300,19 @@ let allStudentsPassedTheCourse = students.some(function(student){
 })
 
 console.log(allStudentsPassedTheCourse)
+
+//reduce helper
+const previous = 200;
+const current = [
+  {expense: 'Guitar', amount: 200},
+  {expense: 'Mic', amount: 100},
+  {expense: 'Strap', amount: 100}
+]
+
+const expenseResults = current.reduce(function(sum, expense){
+  return sum + expense.amount
+}, previous)
+
+//whenever we call reduce, it enters the anonymous function and takes an argument at first (sum). This argument is going to be the starting point. At the bottom there is a value(previous). Whenever the loops start, reduce uses that value as a starting point, then it passes the time and then it goes to the first iteration.
+
+console.log(expenseResults)
