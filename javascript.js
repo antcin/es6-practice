@@ -394,3 +394,38 @@ const carsFatArrow = {
 }
 
 carsFatArrow.message();
+
+//object literals
+//es5
+// const createCharacter = function(name, powers){
+//   return {
+//     name: name,
+//     powers: powers,
+//     getFriends: function(){
+//       return 'Clark Kent'
+//     }
+//   }
+// }
+//
+// const characterObj = createCharacter('Superman', 'Fly');
+//
+// console.log(characterObj);
+
+//es6
+const createCharacter = (name, powers) => {
+  return {
+    name,
+    powers,
+    getFriends(){
+      return 'Clark Kent';
+    },
+    getEnemies(){
+      return 'Skeletor';
+    }
+  }
+}
+
+const characterObj = createCharacter('Superman', 'Fly');
+
+console.log(characterObj);
+console.log(characterObj.getFriends())
