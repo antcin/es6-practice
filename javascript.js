@@ -345,3 +345,25 @@ for(let number of numbersForOf){
 }
 
 console.log(totalForOf)
+
+//fat arrow functions
+//es5
+// const value = function(name, age){
+//   return `My name is ${name} and I am ${age}`
+// };
+
+
+//es6
+// const value = (name, age) => {
+//   return `My name is ${name} and I am ${age}`
+// };
+// console.log(value("James", 45))
+
+//no need for curly braces with single expression
+// const value = (x, y) => x + y ;
+// console.log(value(1, 2))
+
+//no need for parentheses when we only have one single argument
+const value = x => x + 10;
+
+console.log(value(1))
