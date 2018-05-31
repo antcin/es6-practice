@@ -329,3 +329,19 @@ const nameReduce = usersReduce.reduce(function(start, userReduce){
 },[])
 
 console.log(nameReduce)
+
+//for of
+const namesForOf = ["Jane", "Thomas", "James"];
+
+for(let name of namesForOf){
+  console.log(name)
+}
+
+const numbersForOf = [10, 20, 30, 40, 50];
+let totalForOf = 0;
+
+for(let number of numbersForOf){
+  totalForOf += number
+}
+
+console.log(totalForOf)
