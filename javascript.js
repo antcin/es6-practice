@@ -316,3 +316,16 @@ const expenseResults = current.reduce(function(sum, expense){
 //whenever we call reduce, it enters the anonymous function and takes an argument at first (sum). This argument is going to be the starting point. At the bottom there is a value(previous). Whenever the loops start, reduce uses that value as a starting point, then it passes the time and then it goes to the first iteration.
 
 console.log(expenseResults)
+
+const usersReduce = [
+  {name: 'Francis', lastname: 'Norton', age: 25},
+  {name: 'Martha', lastname: 'Norton', age: 45},
+  {name: 'Rob', lastname: 'Norton', age: 55}
+]
+
+const nameReduce = usersReduce.reduce(function(start, userReduce){
+  start.push(userReduce.name)
+  return start;
+},[])
+
+console.log(nameReduce)
