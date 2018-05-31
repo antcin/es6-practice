@@ -346,7 +346,7 @@ for(let number of numbersForOf){
 
 console.log(totalForOf)
 
-//fat arrow functions
+//fat arrow functions part one
 //es5
 // const value = function(name, age){
 //   return `My name is ${name} and I am ${age}`
@@ -367,3 +367,30 @@ console.log(totalForOf)
 const value = x => x + 10;
 
 console.log(value(1))
+
+//fat arrow functions part two
+//es5
+// const carsFatArrow = {
+//   brands:['Ford', 'Audi', 'BMW'],
+//   category: 'sportscar',
+//   message: function(){
+//     let $this = this;
+//     return this.brands.map(function(brand){
+//       console.log(`${brand} is a ${$this.category}`)
+//     });
+//   }
+// }
+
+//es6
+// when using fat arrow functions, scope does not change
+const carsFatArrow = {
+  brands:['Ford', 'Audi', 'BMW'],
+  category: 'sportscar',
+  message: function(){
+    return this.brands.map((brand) => {
+      console.log(`${brand} is a ${this.category}`)
+    });
+  }
+}
+
+carsFatArrow.message();
