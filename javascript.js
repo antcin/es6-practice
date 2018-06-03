@@ -429,3 +429,26 @@ const characterObj = createCharacter('Superman', 'Fly');
 
 console.log(characterObj);
 console.log(characterObj.getFriends())
+
+//default function arguments
+//es5
+// function carsDefaultFunctionArguments(brand){
+//   if(!brand){
+//     brand = "Ford"
+//   }
+//   console.log(`My brand is ${brand}`)
+// }
+//
+// carsDefaultFunctionArguments()
+
+//es6
+function randomBrand(){
+  const brands = ['ford', 'nissan', 'bmw']
+  return brands[Math.floor(Math.random() * brands.length)]
+}
+
+function carsDefaultFunctionArguments(brand = randomBrand()){
+  console.log(`My brand is ${brand}`)
+}
+
+carsDefaultFunctionArguments()
