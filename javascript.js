@@ -452,3 +452,24 @@ function carsDefaultFunctionArguments(brand = randomBrand()){
 }
 
 carsDefaultFunctionArguments()
+
+//rest operator
+//es5
+// function args(arg1, arg2, arg3){
+//   const arguments = [arg1, arg2, arg3]
+//
+//   console.log(arguments)
+// }
+//
+// args("val 1", "val2", "val 3")
+
+//es6
+// function hey(){
+//   console.log('Hey')
+// }
+
+function args(...args){
+  console.log(`My name is ${args[0]}, I am ${args[1]} years old and my eyes are ${args[2]}.`)
+}
+
+args("Francis", "20", "green")
