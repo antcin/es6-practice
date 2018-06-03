@@ -467,9 +467,23 @@ carsDefaultFunctionArguments()
 // function hey(){
 //   console.log('Hey')
 // }
-
 function args(...args){
   console.log(`My name is ${args[0]}, I am ${args[1]} years old and my eyes are ${args[2]}.`)
 }
 
 args("Francis", "20", "green")
+
+//spread operator
+//es5
+// const brandsSpread = ["Ford", "Nissan"];
+// const otherBrands = ["Audi", "Bmw"];
+//
+// const spreadArray = brandsSpread.concat(otherBrands)
+
+//es6
+const CarBrandsSpread = ["Ford", "Nissan"];
+const otherCarBrands = ["Audi", "Bmw"];
+
+
+const spreadArray = [...CarBrandsSpread,...otherCarBrands,'Other brand'];
+console.log(spreadArray)
