@@ -6,7 +6,6 @@
 //    return 'Hello '+ name;
 // }
 // console.log(greeting())
-
 greeting = (name = 'user' ) => {
   return `Hello ${name}`
 }
